@@ -1,0 +1,413 @@
+.container {
+  width: 100%;
+}
+
+/* title */
+.container > .title {
+  padding: 2.4rem;
+  border-bottom: 1px solid #e7eaf0;
+}
+.container > .title > .top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container > .title > .top > .left > h2 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  letter-spacing: -0.1rem;
+  line-height: 2.8rem;
+  white-space: nowrap;
+}
+
+.container > .title > .top > .right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.6rem;
+}
+
+.container > .title > .top > .right > button {
+  padding: 0.8rem 1.6rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  border: 0.1rem solid transparent;
+  background-color: transparent;
+  border-radius: 0.7rem;
+  font-weight: 500;
+  transition: filter 0.2s, background 0.2s;
+}
+
+.container > .title > .top > .right > button:hover {
+  filter: saturate(2);
+}
+
+.container > .title > .top > .right > button:nth-child(1) {
+  border: 0.1rem solid #e7eaf0;
+  color: #161955;
+}
+
+.container > .title > .top > .right > button:nth-child(1):hover {
+  background-color: #e7eaf0;
+}
+
+.container > .title > .top > .right > button:nth-child(2) {
+  background-color: #5c60f5;
+  color: #fff;
+}
+
+.container > .title > .bottom {
+  margin-top: 3rem;
+}
+
+.container > .title > .bottom > button {
+  white-space: nowrap;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.container > .title > .bottom > button:not(:last-child) {
+  margin-right: 3.2rem;
+}
+
+.container > .title > .bottom > button.active {
+  color: #5c64f4;
+}
+
+.container > .title > .bottom > button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 0.1rem;
+  background-color: #5c60f5;
+  border-radius: 500rem;
+  left: 0;
+  bottom: -2.5rem;
+  transform: scaleX(0);
+  transition: transform 0.2s;
+}
+
+.container > .title > .bottom > button.active::after {
+  transform: scaleX(1);
+}
+
+/* cards */
+.container > .cards {
+  padding: 2.4rem;
+  background-color: #f4f8fb;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2.4rem;
+}
+
+@media screen and (max-width: 1490px) {
+  .container > .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container > .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.container > .cards > .card {
+  background-color: #fff;
+  box-shadow: 0.1rem 0.1rem 0.5rem 0.2rem rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+
+.container > .cards > .card > .left {
+  flex: 1;
+}
+
+.container > .cards > .card > .left > h6 {
+  color: #6b7b93;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  margin-bottom: 1.6rem;
+  font-weight: 500;
+}
+
+.container > .cards > .card > .left > span {
+  color: #16192c;
+  font-size: 2.2rem;
+  line-height: 2.2rem;
+  font-weight: 600;
+}
+.container > .cards > .card > .left > .profit {
+  margin-top: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.6rem;
+}
+
+.container > .cards > .card > .left > .profit > .profitLost {
+  font-size: 1rem;
+  line-height: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.container > .cards > .card > .left > .profit.up > .profitLost {
+  color: #12cf90;
+  background-color: #ccf5e7;
+}
+.container > .cards > .card > .left > .profit.down > .profitLost {
+  color: #ff3366;
+  background-color: #ffd6e0;
+}
+
+.container > .cards > .card > .left > .profit > .date {
+  font-size: 1.2rem;
+  color: #6b7b93;
+}
+
+.container > .cards > .card > .right > span {
+  width: 4.8rem;
+  aspect-ratio: 1/1;
+  background-color: var(--bgColor);
+  display: block;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.3rem;
+}
+
+/* table */
+.container > .table {
+  background-color: #f4f8fb;
+  padding: 0rem 2.4rem 5rem;
+}
+
+.container > .table > .top {
+  background-color: #fff;
+  border-top-right-radius: 1.5rem;
+  border-top-left-radius: 1.5rem;
+  padding: 1.2rem 2.4rem;
+  box-shadow: 0.1rem 0.1rem 0.5rem 0.2rem rgba(0, 0, 0, 0.05);
+}
+.container > .table > .top > h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.container > .table > .wrapper {
+  overflow-x: auto;
+  box-shadow: 0.1rem 0.3rem 0.5rem 0.2rem rgba(0, 0, 0, 0.05);
+}
+
+@media screen and (max-width: 1200px) {
+  .container > .table > .wrapper {
+    width: calc(100vw - 4.8rem - 270px);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container > .table > .wrapper {
+    width: calc(100vw - 4.8rem);
+  }
+}
+
+.container > .table > .wrapper > table {
+  background-color: #fff;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.container > .table > .wrapper > table > thead > tr > th {
+  text-align: left;
+  padding: 1.2rem 2.4rem;
+  border-top: 1px solid #e7eaf0;
+  border-bottom: 1px solid #e7eaf0;
+  background-color: #f5f9fc;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #525f7f;
+  white-space: nowrap;
+}
+
+.container > .table > .wrapper > table > tbody > tr > td {
+  padding: 1.2rem 2.4rem;
+  border-bottom: 1px solid #e7eaf0;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #16192c;
+  white-space: nowrap;
+}
+
+.container > .table > .wrapper > table > tbody > tr:hover > td {
+  background-color: #f5f5fc4b;
+}
+.container > .table > .wrapper > table > tbody > tr > td:nth-child(1) > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.container
+  > .table
+  > .wrapper
+  > table
+  > tbody
+  > tr
+  > td:nth-child(1)
+  > div
+  > img {
+  width: 3.6rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.container
+  > .table
+  > .wrapper
+  > table
+  > tbody
+  > tr
+  > td:nth-child(1)
+  > div
+  > span {
+  font-weight: 500;
+}
+
+.container > .table > .wrapper > table > tbody > tr > td:nth-child(3) > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.container
+  > .table
+  > .wrapper
+  > table
+  > tbody
+  > tr
+  > td:nth-child(3)
+  > div
+  > span.icon {
+  width: 3.6rem;
+  aspect-ratio: 1/1;
+  background-color: var(--bgColor);
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  line-height: 2rem;
+  border-radius: 50%;
+}
+
+.container > .table > .wrapper > table > tbody > tr > td:nth-child(5) > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container
+  > .table
+  > .wrapper
+  > table
+  > tbody
+  > tr
+  > td:nth-child(5)
+  > div
+  > span.dot {
+  width: 1rem;
+  aspect-ratio: 1/1;
+  display: block;
+  background-color: var(--bgColor);
+  border-radius: 50%;
+  line-height: 1rem;
+}
+
+.container > .table > .wrapper > table > tbody > tr > td:nth-child(6) > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.container
+  > .table
+  > .wrapper
+  > table
+  > tbody
+  > tr
+  > td:nth-child(6)
+  > div
+  > button {
+  background-color: #fff;
+  border: 1px solid #e7eaf0;
+  border-radius: 0.5rem;
+  padding: 1.2rem 1.6rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: #16192c;
+  transition: background-color 0.2s;
+  outline: none;
+}
+
+.container
+  > .table
+  > .wrapper
+  > table
+  > tbody
+  > tr
+  > td:nth-child(6)
+  > div
+  > button:last-child {
+  font-size: 2rem;
+  line-height: 2rem;
+  padding: 0.8rem 1.6rem;
+}
+
+.container
+  > .table
+  > .wrapper
+  > table
+  > tbody
+  > tr
+  > td:nth-child(6)
+  > div
+  > button:hover {
+  background-color: #e7eaf0;
+}
+
+.container > .table > .bottom {
+  padding: 2rem 2.4rem;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  background-color: #fff;
+  box-shadow: 0rem 0.2rem 0.5rem 0.2rem rgba(0, 0, 0, 0.05);
+}
+.container > .table > .bottom > span {
+  font-size: 1.4rem;
+  color: #7e8ca1;
+}

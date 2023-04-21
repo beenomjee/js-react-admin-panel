@@ -1,0 +1,226 @@
+.container {
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid #e7eaf0;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.container > .logo {
+  padding: 2rem 2.5rem;
+}
+
+.container > .logo > img {
+  height: 4rem;
+}
+
+/* nav */
+.container > .nav > ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.container > .nav > ul > li > a {
+  color: #16192c;
+  padding: 1.4rem 2.4rem;
+  display: flex;
+  width: 100%;
+  gap: 1.6rem;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.15s, color 0.15s;
+}
+.container > .nav > ul > li > a.active {
+  background-color: #f5f9fc;
+  color: #495392;
+}
+
+.container > .nav > ul > li > a:hover {
+  background-color: #f5f9fc;
+  color: #495392;
+}
+
+.container > .nav > ul > li > a > .left {
+  display: flex;
+  width: 100%;
+  gap: 1.6rem;
+}
+
+.container > .nav > ul > li > a > .left > span.icon {
+  color: #6b7b93;
+  font-size: 1.5rem;
+}
+
+.container > .nav > ul > li > a > .left > span.text {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.container > .nav > ul > li > a > .right > span {
+  background-color: #dedffd;
+  color: #7164f5;
+  border-radius: 1000rem;
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* contact */
+.container > .contactContainer {
+  margin-top: 4rem;
+  padding: 0rem 2.4rem;
+  flex: 1;
+}
+
+.container > .contactContainer > .title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+.container > .contactContainer > .title > h6 {
+  color: #6b7b93;
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.container > .contactContainer > .title > span {
+  background-color: #dedffd;
+  color: #7164f5;
+  border-radius: 1000rem;
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.container > .contactContainer > .contacts {
+  margin-top: 1.2rem;
+  user-select: none;
+}
+.container > .contactContainer > .contacts > .contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+  cursor: pointer;
+}
+
+.container > .contactContainer > .contacts > .contact > .left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.6rem;
+}
+
+.container > .contactContainer > .contacts > .contact > .left > .left {
+  position: relative;
+}
+
+.container > .contactContainer > .contacts > .contact > .left > .left::after {
+  content: "";
+  display: block;
+  width: 10px;
+  aspect-ratio: 1/1;
+  position: absolute;
+  background-color: #ff3366;
+  border-radius: 50%;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #fff;
+}
+
+.container
+  > .contactContainer
+  > .contacts
+  > .contact
+  > .left
+  > .left.active::after {
+  background-color: #00cc88;
+}
+
+.container > .contactContainer > .contacts > .contact > .left > .left > img {
+  width: 4.6rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.container
+  > .contactContainer
+  > .contacts
+  > .contact
+  > .left
+  > .right
+  > .top
+  > span {
+  font-size: 1.3rem;
+  color: #16192c;
+  font-weight: 500;
+}
+
+.container
+  > .contactContainer
+  > .contacts
+  > .contact:hover
+  > .left
+  > .right
+  > .top
+  > span {
+  color: #6b7b93;
+}
+
+.container
+  > .contactContainer
+  > .contacts
+  > .contact
+  > .left
+  > .right
+  > .bottom
+  > span {
+  color: #6b7b93;
+  font-size: 1.1rem;
+}
+
+.container > .contactContainer > .contacts > .contact > .right {
+  font-size: 1.6rem;
+  color: #6b7b93;
+}
+
+/* bottom */
+.container > .bottom {
+  padding-bottom: 1rem;
+  margin-top: 4rem;
+}
+.container > .bottom > ul > li > a {
+  display: block;
+  width: 100%;
+  padding: 1.2rem 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.6rem;
+}
+.container > .bottom > ul > li > a:hover {
+  color: #495392;
+  background-color: #f5f9fc;
+}
+.container > .bottom > ul > li > a > span:nth-child(1) {
+  color: #6b7b93;
+  font-size: 1.6rem;
+  line-height: 0rem;
+}
+.container > .bottom > ul > li > a > span:nth-child(2) {
+  color: #16192c;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+}
+
+.container > .bottom > ul > li:nth-child(1) > a > span:nth-child(1) {
+  border: 0.1rem solid #6b7b93;
+  font-size: 1.4rem;
+  border-radius: 0.3rem;
+}
