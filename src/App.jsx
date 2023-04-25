@@ -9,7 +9,8 @@ const App = () => {
   const [isSideOpen, setIsSideOpen] = useState(false);
   const location = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
+    setIsSideOpen(false);
   }, [location])
   return (
     <>
