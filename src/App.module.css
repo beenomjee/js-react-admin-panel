@@ -41,3 +41,9 @@
 .container > .content {
   flex: 1;
 }
+
+.container > .content > .page {
+  min-height: 100vh;
+}
+/* .container > .content > .footer {
+} */
